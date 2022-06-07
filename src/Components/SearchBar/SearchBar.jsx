@@ -12,16 +12,15 @@ const SearchBar = ({ setSearch, setLoading }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (searchValue.length > 0) {
+        if(searchValue.length > 0){
             setLoading(true);
             setSearch(() => {
                 return {
                     view: true,
                     value: searchValue
                 }
-            })
+            });
         }
-
     }
 
     return (

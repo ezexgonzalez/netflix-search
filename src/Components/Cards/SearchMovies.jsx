@@ -21,13 +21,14 @@ const SearchMovies = ({ searchValue, loading, setLoading }) => {
 
   const sliceArray = () => {
 
-    if (searchMovies.length > 0) {
+    if (searchMovies && searchMovies.length > 0) {
       return searchMovies.slice(0, 18);
     } else {
       return [];
     }
 
   }
+  
   if (loading) {
     return (
       <Box display="flex" alignItems="center" padding={"40vh 0"} justifyContent="center" minH={{ base: "", md: "700px" }} h={{ base: "", md: "92vh" }}>
