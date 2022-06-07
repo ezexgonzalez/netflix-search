@@ -13,7 +13,6 @@ const SearchMovies = ({ searchValue, loading, setLoading }) => {
     setLoading(true);
     axios.get(`https://imdb-api.com/API/Search/k_wy6s5y04/${searchValue}`)
       .then(res => {
-        console.log(res.data);
         setSearchMovies(res.data.results);
         setLoading(false);
       });

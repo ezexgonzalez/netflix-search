@@ -14,7 +14,6 @@ const Cards = ({ loading, setLoading }) => {
     if (topMovies.length === 0) {
       axios.get(`https://imdb-api.com/en/API/MostPopularMovies/k_46s24est`)
         .then(res => {
-          console.log(res.data);
           setTopMovies(res.data.items);
           setLoading(false);
         });
